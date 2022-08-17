@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_btn_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Week-1"
+            app:layout_constraintBottom_toTopOf="@id/check_box_monday"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_tuesday"
+            app:layout_constraintStart_toStartOf="@id/check_box_monday"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/check_box_monday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/ic_date_unchecked"
+            android:button="@null"
+            app:layout_constraintBottom_toTopOf="@id/check_box_wednesday"
+            app:layout_constraintEnd_toStartOf="@id/check_box_tuesday"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/switch_btn_week" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_monday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_monday"
+            app:layout_constraintStart_toStartOf="@id/check_box_monday"
+            app:layout_constraintTop_toTopOf="@id/check_box_monday" />
+
+        <View
+            android:id="@+id/check_box_tuesday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/ic_date_unchecked"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/check_box_monday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/check_box_monday"
+            app:layout_constraintTop_toTopOf="@id/check_box_monday" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_tuesday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_tuesday"
+            app:layout_constraintStart_toStartOf="@id/check_box_tuesday"
+            app:layout_constraintTop_toTopOf="@id/check_box_tuesday" />
+
+        <View
+            android:id="@+id/check_box_wednesday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_date_unchecked"
+            android:button="@null"
+            app:layout_constraintBottom_toTopOf="@id/check_box_friday"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_monday"
+            app:layout_constraintStart_toStartOf="@+id/check_box_monday"
+            app:layout_constraintTop_toBottomOf="@id/check_box_monday" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_wednesday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_wednesday"
+            app:layout_constraintStart_toStartOf="@id/check_box_wednesday"
+            app:layout_constraintTop_toTopOf="@id/check_box_wednesday" />
+
+        <View
+            android:id="@+id/check_box_thursday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_date_unchecked"
+            app:layout_constraintBottom_toBottomOf="@+id/check_box_wednesday"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_tuesday"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/check_box_tuesday"
+            app:layout_constraintTop_toTopOf="@+id/check_box_wednesday"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thursday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_wednesday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_thursday"
+            app:layout_constraintStart_toStartOf="@id/check_box_thursday"
+            app:layout_constraintTop_toTopOf="@id/check_box_thursday" />
+
+
+        <View
+            android:id="@+id/check_box_friday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_date_unchecked"
+            app:layout_constraintBottom_toTopOf="@id/check_box_sunday"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_wednesday"
+            app:layout_constraintStart_toStartOf="@+id/check_box_wednesday"
+            app:layout_constraintTop_toBottomOf="@id/check_box_wednesday" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_friday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_friday"
+            app:layout_constraintStart_toStartOf="@id/check_box_friday"
+            app:layout_constraintTop_toTopOf="@id/check_box_friday" />
+
+        <View
+            android:id="@+id/check_box_saturday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_date_unchecked"
+            app:layout_constraintBottom_toBottomOf="@+id/check_box_friday"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_thursday"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/check_box_thursday"
+            app:layout_constraintTop_toTopOf="@+id/check_box_friday"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_saturday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_saturday"
+            app:layout_constraintStart_toStartOf="@id/check_box_saturday"
+            app:layout_constraintTop_toTopOf="@id/check_box_saturday" />
+
+
+        <View
+            android:id="@+id/check_box_sunday"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/date_checkbox"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/check_box_saturday"
+            app:layout_constraintStart_toStartOf="@+id/check_box_friday"
+            app:layout_constraintTop_toBottomOf="@id/check_box_friday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/check_box_sunday"
+            app:layout_constraintEnd_toEndOf="@id/check_box_sunday"
+            app:layout_constraintStart_toStartOf="@id/check_box_sunday"
+            app:layout_constraintTop_toTopOf="@id/check_box_sunday" />
+
+
+        <View
+            android:id="@+id/view_timer_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_timer_status_rectangle"
+            app:layout_constraintBottom_toTopOf="@+id/view_output"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switch_btn_week" />
+
+        <View
+            android:id="@+id/view_timer_header"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_blue_item"
+            app:layout_constraintBottom_toBottomOf="@id/view_timer_name"
+            app:layout_constraintEnd_toEndOf="@id/view_timer_name"
+            app:layout_constraintStart_toStartOf="@id/view_timer_name"
+            app:layout_constraintTop_toTopOf="@id/view_timer_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIMER NAME"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_timer_header"
+            app:layout_constraintEnd_toEndOf="@id/view_timer_header"
+            app:layout_constraintStart_toStartOf="@id/view_timer_header"
+            app:layout_constraintTop_toTopOf="@id/view_timer_header" />
+
+
+        <EditText
+            android:id="@+id/timer_name_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:maxLength="15"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/view_timer_name"
+            app:layout_constraintEnd_toEndOf="@id/view_timer_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/view_timer_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_header_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/view_output"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_timer_status_rectangle"
+            app:layout_constraintBottom_toTopOf="@+id/view_mode"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/view_timer_name"
+            app:layout_constraintTop_toBottomOf="@+id/view_timer_name" />
+
+        <View
+            android:id="@+id/view_output_header"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+
+            android:background="@drawable/bg_blue_item"
+            app:layout_constraintBottom_toBottomOf="@id/view_output"
+            app:layout_constraintEnd_toEndOf="@id/view_output"
+            app:layout_constraintStart_toStartOf="@id/view_output"
+            app:layout_constraintTop_toTopOf="@id/view_output"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_header_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="OUTPUT"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_output_header"
+            app:layout_constraintEnd_toEndOf="@id/view_output_header"
+            app:layout_constraintStart_toStartOf="@id/view_output_header"
+            app:layout_constraintTop_toTopOf="@id/view_output_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_output_name_value"
+            style="@style/appAutoTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_output"
+            app:layout_constraintEnd_toEndOf="@id/view_output_header"
+            app:layout_constraintStart_toStartOf="@id/view_output_header"
+            app:layout_constraintTop_toBottomOf="@+id/txt_header_output">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/txt_output_name_value_act"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:padding="10dp">
+
+            </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/view_mode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_timer_status_rectangle"
+            app:layout_constraintBottom_toTopOf="@+id/view_flow_sensor"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/view_output"
+            app:layout_constraintTop_toBottomOf="@+id/view_output" />
+
+        <View
+            android:id="@+id/view_mode_header"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_blue_item"
+            app:layout_constraintBottom_toBottomOf="@id/view_mode"
+            app:layout_constraintEnd_toEndOf="@id/view_mode"
+            app:layout_constraintStart_toStartOf="@id/view_mode"
+            app:layout_constraintTop_toTopOf="@id/view_mode"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_header_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="MODE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_mode_header"
+            app:layout_constraintEnd_toEndOf="@id/view_mode_header"
+            app:layout_constraintStart_toStartOf="@id/view_mode_header"
+            app:layout_constraintTop_toTopOf="@id/view_mode_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_mode_value"
+            style="@style/appAutoTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_mode"
+            app:layout_constraintEnd_toEndOf="@id/view_mode"
+            app:layout_constraintStart_toStartOf="@id/view_mode"
+            app:layout_constraintTop_toBottomOf="@id/txt_header_mode">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/txt_mode_value_act"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:completionThreshold="0"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:padding="10dp">
+
+            </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/view_flow_sensor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_timer_status_rectangle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/txt_weeks"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/view_mode"
+            app:layout_constraintTop_toBottomOf="@+id/view_mode" />
+
+        <View
+            android:id="@+id/view_flow_sensor_header"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_margin="2.5dp"
+            android:background="@color/primary"
+            app:layout_constraintBottom_toBottomOf="@id/view_flow_sensor"
+            app:layout_constraintEnd_toEndOf="@id/view_flow_sensor"
+            app:layout_constraintStart_toStartOf="@id/view_flow_sensor"
+            app:layout_constraintTop_toTopOf="@id/view_flow_sensor"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_header_flow_sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="FLOW SENSOR"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_flow_sensor_header"
+            app:layout_constraintEnd_toEndOf="@id/view_flow_sensor_header"
+            app:layout_constraintStart_toStartOf="@id/view_flow_sensor_header"
+            app:layout_constraintTop_toTopOf="@id/view_flow_sensor_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_flow_sensor_value"
+            style="@style/appAutoTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_flow_sensor"
+            app:layout_constraintEnd_toEndOf="@id/view_flow_sensor"
+            app:layout_constraintStart_toStartOf="@id/view_flow_sensor"
+            app:layout_constraintTop_toBottomOf="@id/txt_header_flow_sensor">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/txt_flow_sensor_value_act"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:completionThreshold="0"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:padding="10dp">
+
+            </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Weeks"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/week_checkbox_1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_flow_sensor" />
+
+        <View
+            android:id="@+id/week_checkbox_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/one_unchecked"
+            android:button="@null"
+            app:layout_constraintBottom_toTopOf="@+id/txt_accesory_timmer"
+            app:layout_constraintStart_toStartOf="@id/txt_weeks"
+            app:layout_constraintTop_toBottomOf="@+id/txt_weeks" />
+
+        <View
+            android:id="@+id/week_checkbox_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:background="@drawable/two_unchecked"
+            android:button="@null"
+            app:layout_constraintStart_toEndOf="@id/week_checkbox_1"
+            app:layout_constraintTop_toTopOf="@+id/week_checkbox_1" />
+
+        <View
+            android:id="@+id/week_checkbox_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:background="@drawable/three_unchecked"
+            android:button="@null"
+            app:layout_constraintStart_toEndOf="@id/week_checkbox_2"
+            app:layout_constraintTop_toTopOf="@+id/week_checkbox_2" />
+
+        <View
+            android:id="@+id/week_checkbox_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:background="@drawable/four_unchecked"
+            android:button="@null"
+            app:layout_constraintStart_toEndOf="@id/week_checkbox_3"
+            app:layout_constraintTop_toTopOf="@+id/week_checkbox_3" />
+
+        <TextView
+            android:id="@+id/txt_accesory_timmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Accessory Timer"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Accessory_checkbox_1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week_checkbox_1" />
+
+        <View
+            android:id="@+id/Accessory_checkbox_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/one_unchecked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txt_accesory_timmer"
+            app:layout_constraintTop_toBottomOf="@+id/txt_accesory_timmer" />
+
+        <View
+            android:id="@+id/Accessory_checkbox_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/two_unchecked"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Accessory_checkbox_1"
+            app:layout_constraintTop_toBottomOf="@id/txt_accesory_timmer" />
+
+        <View
+            android:id="@+id/Accessory_checkbox_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/three_unchecked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Accessory_checkbox_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_accesory_timmer" />
+
+        <View
+            android:id="@+id/Accessory_checkbox_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/four_unchecked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Accessory_checkbox_3"
+            app:layout_constraintTop_toBottomOf="@id/txt_accesory_timmer" />
+
+
+        <LinearLayout
+            android:id="@+id/saveLayout_condIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/week_checkbox_4"
+            app:layout_constraintTop_toTopOf="@+id/week_checkbox_4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/saveFab_condIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorSecondary"
+                android:backgroundTint="@color/colorSecondary"
+                android:src="@drawable/ic_round_right"
+                app:maxImageSize="50dp"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

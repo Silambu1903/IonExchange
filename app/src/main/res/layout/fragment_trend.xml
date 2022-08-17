@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Chart Type-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/trendChartTypeTil"
+            style="@style/config_AtxTil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Chart type"
+            app:layout_constraintEnd_toStartOf="@+id/trendSensorOneTil"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/trendChartTypeTie"
+                style="@style/config_Atxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Sensor 1 Type-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/trendSensorOneTil"
+            style="@style/config_AtxTil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Sensor 1"
+            app:layout_constraintEnd_toStartOf="@+id/trendSensorTwoTil"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/trendChartTypeTil"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/trendSensorOneTie"
+                style="@style/config_Atxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Sensor 2 Type-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/trendSensorTwoTil"
+            style="@style/config_AtxTil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Sensor 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toEndOf="@+id/trendSensorOneTil"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/trendSensorTwoTie"
+                style="@style/config_Atxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--From Date-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/trendFromDateTil"
+            style="@style/config_AtxTil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="From Date"
+            app:layout_constraintEnd_toStartOf="@+id/trendToDateTil"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trendChartTypeTil">
+
+            <AutoCompleteTextView
+                android:id="@+id/trendFromDateTie"
+                style="@style/config_Atxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--To Date-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/trendToDateTil"
+            style="@style/config_AtxTil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="To Date"
+            app:layout_constraintEnd_toStartOf="@+id/filterbutton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/trendFromDateTil"
+            app:layout_constraintTop_toBottomOf="@+id/trendChartTypeTil">
+
+            <AutoCompleteTextView
+                android:id="@+id/trendToDateTie"
+                style="@style/config_Atxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--GET-->
+        <Button
+            android:id="@+id/filterbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="GET"
+            app:layout_constraintBottom_toBottomOf="@+id/trendToDateTil"
+            app:layout_constraintEnd_toEndOf="@+id/trendSensorTwoTil"
+            app:layout_constraintStart_toEndOf="@+id/trendToDateTil"
+            app:layout_constraintTop_toTopOf="@+id/trendToDateTil" />
+
+        <!--Line CHART-->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/trendLineChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/filterbutton"
+            app:layout_constraintStart_toStartOf="@+id/trendFromDateTil"
+            app:layout_constraintTop_toBottomOf="@+id/trendToDateTil" />
+
+        <!--Bar/Histogram CHART-->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/trendBarChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/filterbutton"
+            app:layout_constraintStart_toStartOf="@+id/trendFromDateTil"
+            app:layout_constraintTop_toBottomOf="@+id/trendToDateTil"/>
+
+        <!--Scatter Plot CHART-->
+        <com.github.mikephil.charting.charts.ScatterChart
+            android:id="@+id/trendPlotChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/filterbutton"
+            app:layout_constraintStart_toStartOf="@+id/trendFromDateTil"
+            app:layout_constraintTop_toBottomOf="@+id/trendToDateTil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

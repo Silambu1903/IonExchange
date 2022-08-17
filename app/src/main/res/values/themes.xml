@@ -1,0 +1,172 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.IonExchange" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVarient</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="fontFamily">@font/google_font</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVarient</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <!-- Customize your theme here -->
+
+    <!--Config_Nav_textview-->
+    <style name="config_nav_textview" parent="TextAppearance.AppCompat">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <!--App AutoComplete TextView-->
+    <style name="appAutoTxt" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+        <item name="android:clickable">false</item>
+        <item name="android:editable">false</item>
+    </style>
+
+    <!--App EditText-->
+    <style name="appEdtTxt" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+    </style>
+
+    <style name="textAppearence" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/colorSecondary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/colorSecondary</item>
+        <item name="android:navigationBarColor">@color/primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">@color/black</item>
+    </style>
+
+    <style name="DefaultNumberPickerTheme">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="config_Til" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+    </style>
+
+    <style name="con_Til" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+    </style>
+
+    <style name="config_Edt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="config_AtxTil" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+        <item name="android:clickable">false</item>
+        <item name="android:editable">false</item>
+    </style>
+
+    <style name="config_Atxt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:editable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="config_rowLl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="config_rowll_Zero">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="config_Til_Zero" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+    </style>
+
+    <style name="config_Edt_zero">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="config_Atxt_Zero">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:editable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="config_AtxTil_zero" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+        <item name="android:textColorHint">@color/primary</item>
+        <item name="android:clickable">false</item>
+        <item name="android:editable">false</item>
+    </style>
+
+</resources>
